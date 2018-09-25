@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Snake | Insider</title>
+    <link rel="icon" href="assets/img/logo.jpg" type="image/x-icon">
+
+    <link href="assets/css/snake.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.1.js"></script>
+
+    <!-- snake -->
+    <script src="assets/js/snake.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+  </head>
+
+  <body>
+    <div class="container-fluid" style="background: #383b3e; position: absolute;  top: 0; right: 0; bottom: 0; left: 0;">
+      <div class="col-md-2"></div>
+      <div class="col-md-4">
+        <h3 class="uppercase">SNAKE GAME</h3>
+        <h5>by Talgar Marlis Uulu</h5>
+        <div class="h-10"></div>
+
+      </div>
+      <div class="col-md-4">
+        <h3 class="uppercase">High Score:
+          <span id='high_score'>0</span></h3>
+        <h3>Current Score:
+          <span id='current_score'>0</span></h3>
+        <div class="h-10"></div>
+
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-3"></div>
+      <div class="col-md-6" id="game_panel" style="border: 8px solid #71777c; height: 550px; background: #ffffff;"></div>
+      <div class="col-md-3"></div>
+
+      <button type="button" id="btnModal" style="display:none;" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"></button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content" style="background: #aab3ba;">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">GAME OVER</h4>
+            </div>
+            <div class="modal-body" style="height: 200px;">
+              <div>
+                <div class="col-md-4">
+                  <img class="image-responsive" src="assets/img/logo.jpg" style="width:100%;"/>
+                </div>
+                <div class="col-md-8">
+                  <h3 class="uppercase">High Score:
+                    <span id='hhigh_score'>0</span></h3>
+                  <h3>Your Score:
+                    <span id='your_current_score'>0</span></h3>
+                  <div class="h-10"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div id="snake_meal" style="z-index:999999; width: 15px; height: 15px; position: fixed; background: black;"></div>
+
+  </body>
+
+</html>
